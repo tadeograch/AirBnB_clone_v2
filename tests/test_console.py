@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Testing console """
+""" aaaa """
 
 import pep8
 import unittest
@@ -16,14 +16,13 @@ from os import getenv
 from console import HBNBCommand
 
 
-class test_pep8_style(unittest.TestCase):
-    """ Testing pep8 style for the console """
-
+class test_pep8aa(unittest.TestCase):
+    """ testingggggggggggggggggggggggggg """
     def test_pep8_conformance_console(self):
         """Test that console.py conforms to PEP8."""
         pep8s = pep8.StyleGuide(quiet=True)
         result = pep8s.check_files(['console.py'])
-        self.assertEqual(result.total_errors, 3,
+        self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
 
     def test_pep8_conformance_test_console(self):
