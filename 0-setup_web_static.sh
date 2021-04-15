@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Sets up my web servers for the deployment of web_static
-sudo apt-get install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
 mkdir -p /data/web_static/releases/test/ /data/web_static/shared/
 echo -e "<html>\n  <head>\n  </head>\n  <body>\n    Holberton School\n  </body>\n</html>" > /data/web_static/releases/test/index.html
 rm -f /data/web_static/current
