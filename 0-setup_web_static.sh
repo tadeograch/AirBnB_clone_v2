@@ -3,7 +3,6 @@
 sudo apt-get install nginx
 mkdir -p /data/web_static/releases/test /data/web_static/shared
 echo -e "<html>\n  <head>\n  </head>\n  <body>\n    Holberton School\n  </body>\n</html>" > /data/web_static/releases/test/index.html
-rm -f /data/web_static/current
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 chown -R ubuntu:ubuntu /data/
 alias="location /hbnb_static/ {\n\talias /data/web_static/current/;\n}"
