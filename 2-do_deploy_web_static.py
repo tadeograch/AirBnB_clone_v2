@@ -14,8 +14,8 @@ def do_deploy(archive_path):
     if path.exists(archive_path) is False:
         return False
     try:
-        name = archive_path[9:]
-        no_extension = name[:-4]
+        name = archive_path.split("/")[-1]
+        no_extension = name.split(".")[0]
         path_r = "/data/web_static/releases/"
         path_c = "/data/web_static/current"
         put(archive_path, "/tmp/")
