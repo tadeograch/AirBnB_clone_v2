@@ -29,7 +29,7 @@ def c_variable(text):
 def python_variable(text="is cool"):
     '''Display Python followed by the value of the text variable'''
     new_text = text.replace("_", " ")
-    return "C {}".format(new_text)
+    return "Python {}".format(new_text)
 
 if __name__ == '__main__':
     '''Listening on 0.0.0.0, port 5000'''
