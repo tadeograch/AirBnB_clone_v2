@@ -24,11 +24,12 @@ def c_variable(text):
     return "C {}".format(escape(new_text))
 
 
-@app.route('/python/(<text>)', strict_slashes=False)
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def python_variable(text="is cool"):
     '''Display Python followed by the value of the text variable'''
     new_text = text.replace("_", " ")
-    return "C {}".format(escape(new_text))
+    return "Python {}".format(new_text)
 
 
 @app.route('/number/<int:n>)', strict_slashes=False)
