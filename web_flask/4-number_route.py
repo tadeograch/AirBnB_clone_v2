@@ -35,7 +35,7 @@ def python_variable(text="is cool"):
 @app.route('/number/<int:n>)', strict_slashes=False)
 def number_variable(n):
     '''Display n is a number only if n is an integer'''
-    return "{:d} is a number".format(n)
+    return "{} is a number".format(n)
 
 if __name__ == '__main__':
     '''Listening on 0.0.0.0, port 5000'''
