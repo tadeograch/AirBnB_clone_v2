@@ -51,7 +51,8 @@ def number_odd_or_even(n):
         odd_or_even = "even"
     else:
         odd_or_even = "odd"
-    return render_template("6-number_odd_or_even.html", n=n, odd_or_even=odd_or_even)
+    return render_template("6-number_odd_or_even.html",
+                           n=n, odd_or_even=odd_or_even)
 
 if __name__ == '__main__':
     '''Listening on 0.0.0.0, port 5000'''
