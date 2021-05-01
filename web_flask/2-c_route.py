@@ -21,7 +21,7 @@ def hbnb():
 def hbnb(text):
     '''Display C followed by the value of the text variable'''
     new_text = text.replace("_", " ")
-    return "C {}".format(escape(new_text))
+    return "C {}".format(new_text)
 
 if __name__ == '__main__':
     '''Listening on 0.0.0.0, port 5000'''
