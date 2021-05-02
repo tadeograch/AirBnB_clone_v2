@@ -5,14 +5,16 @@
     </HEAD>
     <BODY>
         {% if id %}
-            {% for state in s_list if state.id == id %}
-                <H1>State: {{ state.name }}</H1>
-                <H3>Cities:</H3>
-                <UL>
-                    {% for city in state.cities | sort(attribute='name') %}
-                    <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
-                    {% endfor %}
-                </UL>
+            {% for state in s_list %}
+                {% if state.id == id %}
+                    <H1>State: {{ state.name }}</H1>
+                    <H3>Cities:</H3>
+                    <UL>
+                        {% for city in state.cities | sort(attribute='name') %}
+                        <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
+                        {% endfor %}
+                    </UL>
+                {% endif %}
             {% endfor %}
         {% else %}
             <H1>States</H1>
